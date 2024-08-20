@@ -1,0 +1,58 @@
+.table td .progress {
+  width: 250px;
+  height: 4px;
+  margin: 0;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  display: inline-flex; /* Allows the progress bar to align properly */
+}
+
+.progress-bar {
+  background-color: #f39849;
+  border-radius: 0.25rem;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  vertical-align: top;
+  border-top: 1px solid #e9ecef;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #e9ecef;
+}
+
+.table .thead-dark th {
+  color: #f8f9fe;
+  border-color: #1f3a68;
+  background-color: #172b4d;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.my-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}

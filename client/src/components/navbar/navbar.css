@@ -1,0 +1,94 @@
+/* Navbar.css */
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #343a40; /* Dark background color */
+  z-index: 1050; /* Ensure it sits above other content */
+}
+
+.nav__logo-img {
+  width: 135px; /* Logo size */
+  height: 67px;
+}
+
+.navbar {
+  padding: 0 1rem; /* Padding for the navbar */
+}
+
+.navbar-nav {
+  flex-direction: row; /* Horizontal alignment on larger screens */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 0.5rem; /* Spacing between nav items */
+}
+
+.navbar-nav .nav-link {
+  color: white; /* Link color */
+  font-size: 16px; /* Font size */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #F39849; /* Light color on hover */
+}
+
+.navbar-nav .nav-link.active {
+  color: #F39849; /* Light color for active state */
+}
+
+/* Toggler Button */
+.navbar-toggler {
+  border: none; /* Remove default border */
+  color: white; /* Toggler icon color */
+}
+
+.navbar-toggler-icon {
+  background: none; /* Remove default background */
+}
+
+/* Collapsed Menu */
+.collapse {
+  transition: all 0.3s ease; /* Smooth transition for collapse */
+}
+
+.collapse.show {
+  display: flex !important; /* Ensure menu displays when toggled */
+}
+
+/* Mobile Styles */
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    width: 100%; /* Ensure full-width menu */
+    background-color: #343a40; /* Background color for dropdown */
+    align-items: center; /* Center align menu items */
+    padding-top: 1rem; /* Padding at the top */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 1rem; /* Adjust padding for mobile */
+    text-align: center; /* Center align text */
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 576px) {
+  .nav__logo-img {
+    width: 120px; /* Adjust logo size for smaller screens */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Smaller font size for extra small screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+  }
+}
+

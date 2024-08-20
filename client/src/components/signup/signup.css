@@ -1,0 +1,85 @@
+/* Signup.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .signup-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .signup-form button {
+    padding: 10px;
+    background-color: hsl(28, 88%, 62%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover {
+    background-color: hsl(28deg 100% 56.84%);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .signup-container {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .signup-container {
+      padding: 10px;
+    }
+  
+    .signup-form input,
+    .signup-form button {
+      font-size: 14px;
+    }
+  }
+
+  .role-selection{
+    display: flex;
+  }
+
+  .role-selection label{
+    margin-left: 7px;
+  }
+
+  .mr-text{
+    margin-right: 3px;
+  }
+
+  @media (max-width: 367px){
+    .role-selection{
+      flex-direction: column;
+    }
+  }
