@@ -59,7 +59,7 @@ const PORT = process.env.PORT || 3000;
 
 // CORS configuration
 const corsOptions = {
-    origin: ['https://your-frontend-url.vercel.app'], // yahan apna frontend URL daalain
+    origin: ['https://voting-app-zeta-inky.vercel.app'], // yahan apna frontend URL daalain
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   };
