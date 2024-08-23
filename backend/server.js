@@ -56,8 +56,16 @@ const db = require('./db');
 app.use(bodyParser.json());
 const PORT = process.env.PORT || 3000;
 
+
+// CORS configuration
+const corsOptions = {
+    origin: ['https://your-frontend-url.vercel.app'], // yahan apna frontend URL daalain
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  };
+
 // Enable CORS
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Import the router files
 const userRoutes = require('./routes/userRoutes');
