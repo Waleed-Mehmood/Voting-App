@@ -24,7 +24,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/user/login", formData);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, formData);
       login(response.data.token); // Call login function to set token in context
       toast.success('Login successful!'); // Show success toast
       navigate("/profile");

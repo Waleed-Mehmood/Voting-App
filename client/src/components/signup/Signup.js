@@ -118,7 +118,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/user/signup', formData);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/signup`, formData);
       login(response.data.token); // Call login function to set token in context
       toast.success('Signup successful!'); // Show success toast
       setFormData({ // Clear form fields

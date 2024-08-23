@@ -88,7 +88,7 @@ export const UserProvider = ({ children }) => {
 
   const fetchUserProfile = async (token) => {
     try {
-      const response = await axios.get('http://localhost:3000/user/me', {
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/me`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const fetchedVotedCandidate = response.data.votedCandidate;

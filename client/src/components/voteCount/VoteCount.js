@@ -9,7 +9,7 @@ const VoteCount = () => {
   useEffect(() => {
     const fetchVoteCounts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/candidate/vote/count');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/candidate/vote/count`);
         setCandidates(response.data);
       } catch (error) {
         console.error('Error fetching vote counts', error);

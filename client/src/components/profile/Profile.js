@@ -22,7 +22,7 @@ export default function Profile() {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:3000/user/profile", {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ export default function Profile() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        "http://localhost:3000/user/profile",
+        `${process.env.REACT_APP_BACKEND_URL}/user/profile`,
         userData,
         {
           headers: {

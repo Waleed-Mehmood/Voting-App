@@ -921,7 +921,7 @@ const Candidates = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/candidate");
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/candidate`);
         setCandidates(response.data);
       } catch (error) {
         console.error("Error fetching candidates", error);
@@ -972,7 +972,7 @@ const Candidates = () => {
         return;
       }
       await axios.post(
-        `http://localhost:3000/candidate/vote/${candidateID}`,
+        `${process.env.REACT_APP_BACKEND_URL}/candidate/vote/${candidateID}`,
         { },
         {
           headers: {
@@ -1009,7 +1009,7 @@ const Candidates = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:3000/candidate/${editingCandidate._id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/candidate/${editingCandidate._id}`,
         editingCandidate,
         {
           headers: {
@@ -1039,7 +1039,7 @@ const Candidates = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:3000/candidate",
+        `${process.env.REACT_APP_BACKEND_URL}/candidate`,
         newCandidate,
         {
           headers: {
@@ -1065,7 +1065,7 @@ const Candidates = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:3000/candidate/${candidateID}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/candidate/${candidateID}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

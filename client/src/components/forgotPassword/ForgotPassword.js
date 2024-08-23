@@ -14,7 +14,7 @@ function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/user/forgot-password", { IDCardNumber });
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/forgot-password`, { IDCardNumber });
       toast.success('Password reset link has been sent to your email.');
     } catch (error) {
       console.error("Forgot password error", error);
